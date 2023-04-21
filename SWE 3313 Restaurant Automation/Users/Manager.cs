@@ -10,9 +10,9 @@ namespace SWE_3313_Restaurant_Automation.Users
     {
         public Manager()
         {
-            EmployeeID = 12345;
-            Username = "Doug Smith";
-            Password = "password123!";
+            employeeID = 12345;
+            username = "Doug Smith";
+            password = "password123!";
         }
        
     }

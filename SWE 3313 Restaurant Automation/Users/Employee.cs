@@ -8,26 +8,26 @@ namespace SWE_3313_Restaurant_Automation.Users
 {
     internal abstract class Employee
     {
-        protected int EmployeeID;
-        protected String? Username;
-        protected String? Password;
+        protected int employeeID;
+        protected String? username;
+        protected String? password;
 
         
         public void SetUsername(String Username)
         {
-            this.Username = Username;
+            this.username = Username;
         }
         public void SetPassword(String Password)
         {
-            this.Password = Password;
+            this.password = Password;
         }
         public String GetPassword()
         {
-            return Password;
+            return password;
         }
         public String GetUsername()
         {
-            return Username;
+            return username;
         }
     }
 }
