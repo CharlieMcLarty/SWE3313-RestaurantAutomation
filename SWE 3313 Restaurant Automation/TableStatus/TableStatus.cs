@@ -18,9 +18,9 @@ namespace SWE_3313_Project
 
         public TableStatus()
         {
-            
+
             InitializeComponent();
-            
+
 
         }
 
@@ -33,6 +33,16 @@ namespace SWE_3313_Project
         {
             Order startOrder = new Order();
             startOrder.Show();
+        }
+
+        private void Table_Status_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            TableStatus.ActiveForm.Close();
         }
     }
 }

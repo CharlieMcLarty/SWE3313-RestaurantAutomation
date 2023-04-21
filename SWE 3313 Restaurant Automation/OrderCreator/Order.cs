@@ -14,5 +14,10 @@ namespace SWE_3313_Project
         {
             InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Order.ActiveForm.Close();
+        }
     }
 }
