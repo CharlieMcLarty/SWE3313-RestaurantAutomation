@@ -17,8 +17,26 @@ namespace SWE_3313_Project
             InitializeComponent();
             
         }
-        
-        
+        public static Dictionary<string, Color> ButtonColors { get; set; } = new Dictionary<string, Color>()
+        {
+            { "button1", Color.Gray },
+            { "button2", Color.White },
+            { "button3", Color.White }
+        };
+        public void ChangeButtonColors()
+        {
+            foreach (KeyValuePair<string, Color> kvp in ButtonColors)
+            {
+                Control[] matches = this.Controls.Find(kvp.Key, true); // Find the control with the matching name
+                if (matches.Length > 0 && matches[0] is Button)
+                {
+                    Button button = (Button)matches[0];
+                    button.BackColor = kvp.Value; // Set the color of the button using the value in the dictionary
+                }
+            }
+            this.Show();
+        }
+
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
@@ -27,80 +45,24 @@ namespace SWE_3313_Project
         
         public void button1_Click(object sender, EventArgs e)
         {
-            /*Control ctrl = ((Control)sender);
-            switch (ctrl.BackColor.Name)
-            {
-                case "Control":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                case "Green":
-                    ctrl.BackColor = Color.Blue;
-                    break;
-                case "Blue":
-                    ctrl.BackColor = Color.Red;
-                    break;
-                case "Red":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                default:
-                    break;
-            }*/
-            TableStatus tableStatus = new TableStatus();
-            tableStatus.Show();
+            Table_1 table_1 = new Table_1();
+            table_1.Show();
+            this.Close();
         }
         
         private void button2_Click(object sender, EventArgs e)
         {
-            /*Control ctrl = ((Control)sender);
-            switch (ctrl.BackColor.Name)
-            {
-                case "Control":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                case "Green":
-                    ctrl.BackColor = Color.Blue;
-                    break;
-                case "Blue":
-                    ctrl.BackColor = Color.Red;
-                    break;
-                case "Red":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                default:
-                    break;
-            }*/
+            Table_2 table_2 = new Table_2();
+            table_2.Show();
+            this.Close();
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            /*Control ctrl = ((Control)sender);
-            switch (ctrl.BackColor.Name)
-            {
-                case "Control":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                case "Green":
-                    ctrl.BackColor = Color.Blue;
-                    break;
-                case "Blue":
-                    ctrl.BackColor = Color.Red;
-                    break;
-                case "Red":
-                    ctrl.BackColor = Color.Green;
-                    break;
-                default:
-                    break;
-            }*/
+            Table_3 table_3 new Table_3();
+            table_3.Show();
+            this.Close();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void tableReady_Click(object sender, EventArgs e)
-        {
-
-
-        }
     }
 }
