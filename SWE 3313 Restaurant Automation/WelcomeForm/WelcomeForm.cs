@@ -15,10 +15,12 @@ namespace SWE_3313_Project
         public WelcomeForm()
         {
             InitializeComponent();
-            
         }
         
-        
+        private void buttonClick(object sender, EventArgs e, int tableNum)
+        {
+            
+        }
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
