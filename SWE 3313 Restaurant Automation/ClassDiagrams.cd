@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="SWE_3313_Restaurant_Automation.OrderCreator.MenuItem">
+    <Position X="3.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAEAEACAAAIAAAAAAA=</HashCode>
+      <FileName>OrderCreator\MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.OrderCreator.OrderObject">
+    <Position X="5.25" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAgAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderCreator\OrderObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.Program">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.TableStatus.TableObject">
+    <Position X="11.25" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAQAAAAAEAAAAAEBAAEAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>TableStatus\TableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.Users.Employee">
+    <Position X="2" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAABAAAAEAAAAAAgAAAAAAggAAAAA=</HashCode>
+      <FileName>Users\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.Users.Manager">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Restaurant_Automation.Users.Waiter">
+    <Position X="5.25" Y="1.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Users\Waiter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Project.LoginPage">
+    <Position X="2.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAoBIAAAACAAAAAAAACAAAACAIAAAAQGAASAAABAAAA=</HashCode>
+      <FileName>LoginPage\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Project.Order">
+    <Position X="5.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAIAAAAAAAAAOASAAA=</HashCode>
+      <FileName>OrderCreator\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWE_3313_Project.TableStatus">
+    <Position X="10" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAKAAAAAQQICQAAACAAAIAAAAAAAAACQAgAA=</HashCode>
+      <FileName>TableStatus\TableStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
