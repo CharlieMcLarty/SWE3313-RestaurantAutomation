@@ -35,20 +35,22 @@
             this.Table_Dirty = new System.Windows.Forms.Button();
             this.TableStatus = new System.Windows.Forms.Label();
             this.Done = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // New_Order
             // 
-            this.New_Order.Location = new System.Drawing.Point(152, 226);
+            this.New_Order.Location = new System.Drawing.Point(333, 233);
             this.New_Order.Name = "New_Order";
             this.New_Order.Size = new System.Drawing.Size(75, 23);
             this.New_Order.TabIndex = 0;
             this.New_Order.Text = "New Order";
             this.New_Order.UseVisualStyleBackColor = true;
+            this.New_Order.Click += new System.EventHandler(this.New_Order_Click);
             // 
             // Payment
             // 
-            this.Payment.Location = new System.Drawing.Point(233, 226);
+            this.Payment.Location = new System.Drawing.Point(414, 233);
             this.Payment.Name = "Payment";
             this.Payment.Size = new System.Drawing.Size(75, 23);
             this.Payment.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // Table_Occupied
             // 
-            this.Table_Occupied.Location = new System.Drawing.Point(172, 131);
+            this.Table_Occupied.Location = new System.Drawing.Point(353, 138);
             this.Table_Occupied.Name = "Table_Occupied";
             this.Table_Occupied.Size = new System.Drawing.Size(111, 23);
             this.Table_Occupied.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // Table_Ready
             // 
-            this.Table_Ready.Location = new System.Drawing.Point(172, 102);
+            this.Table_Ready.Location = new System.Drawing.Point(353, 109);
             this.Table_Ready.Name = "Table_Ready";
             this.Table_Ready.Size = new System.Drawing.Size(111, 23);
             this.Table_Ready.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             // Table_Dirty
             // 
-            this.Table_Dirty.Location = new System.Drawing.Point(172, 160);
+            this.Table_Dirty.Location = new System.Drawing.Point(353, 167);
             this.Table_Dirty.Name = "Table_Dirty";
             this.Table_Dirty.Size = new System.Drawing.Size(111, 23);
             this.Table_Dirty.TabIndex = 4;
@@ -88,7 +90,9 @@
             // TableStatus
             // 
             this.TableStatus.AutoSize = true;
-            this.TableStatus.Location = new System.Drawing.Point(194, 73);
+            this.TableStatus.BackColor = System.Drawing.Color.Transparent;
+            this.TableStatus.ForeColor = System.Drawing.Color.White;
+            this.TableStatus.Location = new System.Drawing.Point(375, 80);
             this.TableStatus.Name = "TableStatus";
             this.TableStatus.Size = new System.Drawing.Size(69, 15);
             this.TableStatus.TabIndex = 5;
@@ -96,7 +100,7 @@
             // 
             // Done
             // 
-            this.Done.Location = new System.Drawing.Point(194, 287);
+            this.Done.Location = new System.Drawing.Point(375, 294);
             this.Done.Name = "Done";
             this.Done.Size = new System.Drawing.Size(75, 23);
             this.Done.TabIndex = 6;
@@ -104,11 +108,21 @@
             this.Done.UseVisualStyleBackColor = true;
             this.Done.Click += new System.EventHandler(this.Done_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(103, 115);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(135, 214);
+            this.listBox1.TabIndex = 7;
+            // 
             // Table_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 450);
+            this.ClientSize = new System.Drawing.Size(571, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Done);
             this.Controls.Add(this.TableStatus);
             this.Controls.Add(this.Table_Dirty);
@@ -132,5 +146,6 @@
         private Button Table_Dirty;
         private Label TableStatus;
         private Button Done;
+        private ListBox listBox1;
     }
 }

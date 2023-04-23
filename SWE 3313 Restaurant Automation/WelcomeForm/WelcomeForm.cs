@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWE_3313_Restaurant_Automation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace SWE_3313_Project
         public WelcomeForm()
         {
             InitializeComponent();
-            
+            this.BackColor = ColorTranslator.FromHtml("#733635");
         }
         public static Dictionary<string, Color> ButtonColors { get; set; } = new Dictionary<string, Color>()
         {
@@ -58,11 +59,22 @@ namespace SWE_3313_Project
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Table_3 table_3 new Table_3();
+            Table_3 table_3 = new Table_3();
             table_3.Show();
             this.Close();
         }
 
-
+        //Logging out of the program and showing the login screen.
+        private void Log_Out_Click(object sender, EventArgs e) 
+        {
+            LoginPage login = Application.OpenForms.OfType<LoginPage>().FirstOrDefault();
+            {
+                if (login != null)
+                {
+                    login.Show();
+                }
+            }
+            this.Close();
+        }
     }
 }

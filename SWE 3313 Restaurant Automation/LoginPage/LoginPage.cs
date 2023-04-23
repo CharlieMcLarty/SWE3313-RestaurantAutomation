@@ -19,6 +19,10 @@ namespace SWE_3313_Project
             InitializeComponent();
             this.BackColor = ColorTranslator.FromHtml("#733635");
         }
+        string employeeID = "admin";
+        string employeePass = "admin";
+        string userID;
+        string password;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -26,29 +30,32 @@ namespace SWE_3313_Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
-          
-    
+            if (userID == employeeID && password == employeePass)
+            {
                 this.Hide();
                 WelcomeForm welcomeForm = new WelcomeForm();
                 welcomeForm.Show();
-          
-            
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Login. Please try again.");
+            }
+
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
             pictureBox1.ImageLocation = "/bin/Image/J's Restaurant Login Icon.png";
         }
 
         private void EmployeeIDBox_TextChanged(object sender, EventArgs e)
         {
-
+            userID = EmployeeIDBox.Text;
         }
 
         private void PasswordBox_TextChanged(object sender, EventArgs e)
         {
-
+            password = PasswordBox.Text;
         }
     }
 }

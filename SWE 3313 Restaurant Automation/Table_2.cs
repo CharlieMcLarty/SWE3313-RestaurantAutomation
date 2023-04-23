@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWE_3313_Project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,17 @@ namespace SWE_3313_Restaurant_Automation
 
         private void Table_Ready_Click(object sender, EventArgs e)
         {
-            WelcomeForm.ButtonColors["button1"] = Color.Green;
+            WelcomeForm.ButtonColors["button2"] = Color.Green;
         }
 
         private void Table_Occupied_Click(object sender, EventArgs e)
         {
-            WelcomeForm.ButtonColors["button1"] = Color.Yellow;
+            WelcomeForm.ButtonColors["button2"] = Color.Yellow;
         }
 
         private void Table_Dirty_Click(object sender, EventArgs e)
         {
-            WelcomeForm.ButtonColors["button1"] = Color.Red;
+            WelcomeForm.ButtonColors["button2"] = Color.Red;
         }
 
         private void Done_Click(object sender, EventArgs e)
