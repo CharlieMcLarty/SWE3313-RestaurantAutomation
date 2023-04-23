@@ -11,17 +11,17 @@ namespace SWE_3313_Project
         static int TableCount = 0;
         private int TableID;
         /// Can be "clean" "full" or "dirty
-        private String Status;
+        public Color Status;
         List<OrderObject> CurrentOrders;
 
         public TableObject()
         {
             TableID = ++TableCount;
-            Status = "clean";
+            Status = Color.Green;
             CurrentOrders = new List<OrderObject>();
         }
 
-        public String GetStatus()
+        public Color GetStatus()
         {
             return Status;
         }

@@ -47,8 +47,6 @@ namespace SWE_3313_Project
                 default:
                     break;
             }*/
-            TableStatus tableStatus = new TableStatus();
-            tableStatus.Show();
         }
         
         private void button2_Click(object sender, EventArgs e)

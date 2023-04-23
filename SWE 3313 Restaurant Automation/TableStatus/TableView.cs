@@ -21,8 +21,13 @@ namespace SWE_3313_Project
 
         public void OnTableClick(object Sender, EventArgs Args)
         {
-            TableStatus tableStatus = new TableStatus();
-            tableStatus.Show();
+            Color initialStatus = button.BackColor;
+            TableStatus tableStatus = new TableStatus(initialStatus);
+            tableStatus.ShowDialog();
+            if (tableStatus.StatusColor != initialStatus && tableStatus.DialogResult == DialogResult.OK)
+            {
+                button.BackColor = tableStatus.StatusColor;
+            }
         }
     }
 }

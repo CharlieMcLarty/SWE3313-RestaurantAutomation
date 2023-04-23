@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             InitializeTableLayout();
-
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +43,99 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tableReady = new System.Windows.Forms.Button();
             this.SuspendLayout();
-           
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 23);
+            this.label8.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 23);
+            this.label11.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 23);
+            this.label12.TabIndex = 1;
+            // 
+            // tableReady
+            // 
+            this.tableReady.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tableReady.Location = new System.Drawing.Point(0, 0);
+            this.tableReady.Name = "tableReady";
+            this.tableReady.Size = new System.Drawing.Size(75, 23);
+            this.tableReady.TabIndex = 0;
+            this.tableReady.UseVisualStyleBackColor = false;
             // 
             // WelcomeForm
             // 
@@ -64,12 +155,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-
             this.Name = "WelcomeForm";
             this.Text = "WelcomeForm";
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -93,10 +182,11 @@
                 int PositionX = InitialX + (TableSize * (i % RowSize)) + SpaceBetweenTables;
                 int PositionY = InitialY + (TableSize * (i / RowSize)) + SpaceBetweenTables;
 
+                TableButton.BackColor = TableViews[i].table.Status;
                 TableButton.Location = new System.Drawing.Point(PositionX, PositionY);
                 TableButton.Size = new System.Drawing.Size(TableSize, TableSize);
                 TableButton.TabIndex = i;
-                TableButton.UseVisualStyleBackColor = true;
+                TableButton.UseVisualStyleBackColor = false;
 
 
                 this.Controls.Add(TableButton);
