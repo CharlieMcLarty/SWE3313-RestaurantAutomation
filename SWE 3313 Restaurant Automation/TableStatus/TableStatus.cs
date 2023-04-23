@@ -11,10 +11,6 @@ namespace SWE_3313_Project
 {
     public partial class TableStatus : Form
     {
-        List<string> seat1 = new List<string>();
-        List<string> seat2 = new List<string>();
-        List<string> seat3 = new List<string>();
-        List<string> seat4 = new List<string>();
         internal TableObject table;
         public Color StatusColor { get; set; }
         internal TableStatus(Color initialColor, TableObject table)
@@ -76,6 +72,12 @@ namespace SWE_3313_Project
             Order startOrder = new Order();
             startOrder.tableID = table.GetTableID();
             startOrder.Show();
+        }
+
+        //Starts new order
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

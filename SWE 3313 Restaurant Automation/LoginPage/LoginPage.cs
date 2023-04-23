@@ -46,16 +46,17 @@ namespace SWE_3313_Project
                 string[] credentials = user.Split(',');
                 if (credentials[0] == username && credentials[1] == password)
                 {
+                    foreach (Waiter waiter in waiters)
+                    {
+                        if (waiter.getEmployeeID() == Int32.Parse(username))
+                        {
+                            currentWaiter = waiter;
+                            break;
+                        }
+                    }
                     WelcomeForm welcomeForm = new WelcomeForm();
                     welcomeForm.Show();
                     this.Hide();
-                    foreach(Waiter waiter in waiters){
-                        if (waiter.getEmployeeId().Equals(username))
-                        {
-                            currentWaiter = waiter;
-                        }
-                    }
-                    return;
                 }
             }
             

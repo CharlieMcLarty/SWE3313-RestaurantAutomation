@@ -55,7 +55,7 @@ namespace SWE_3313_Project
         {
             return username;
         }
-        public int getEmployeeId()
+        public int getEmployeeID()
         {
             return employeeID;
         }

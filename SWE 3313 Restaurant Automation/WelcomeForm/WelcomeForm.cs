@@ -11,7 +11,6 @@ namespace SWE_3313_Project
 {
     public partial class WelcomeForm : Form
     {
-        
         public WelcomeForm()
         {
             InitializeComponent();

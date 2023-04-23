@@ -35,16 +35,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // New_Order
             // 
-            this.New_Order.Location = new System.Drawing.Point(142, 132);
+            this.New_Order.Location = new System.Drawing.Point(142, 90);
             this.New_Order.Name = "New_Order";
             this.New_Order.Size = new System.Drawing.Size(89, 23);
             this.New_Order.TabIndex = 0;
-            this.New_Order.Text = "Order";
+            this.New_Order.Text = "Add to Order";
             this.New_Order.UseVisualStyleBackColor = true;
             this.New_Order.Click += new System.EventHandler(this.New_Order_Click_1);
             // 
@@ -115,11 +116,22 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButtonFull_CheckedChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(142, 136);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Reset Order";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // TableStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Payment);
@@ -141,5 +153,6 @@
         private GroupBox groupBox1;
         private RadioButton radioButton3;
         private RadioButton radioButton2;
+        private Button button2;
     }
 }

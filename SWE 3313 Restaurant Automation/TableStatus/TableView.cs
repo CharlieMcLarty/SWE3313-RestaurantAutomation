@@ -9,7 +9,9 @@ namespace SWE_3313_Project
     internal class TableView
     {
         public TableObject table;
+        public int tableID;
         public Button button;
+        public OrderObject order;
 
         public TableView()
         {
