@@ -41,7 +41,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.tableReady = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -128,21 +127,11 @@
             this.label12.Size = new System.Drawing.Size(100, 23);
             this.label12.TabIndex = 1;
             // 
-            // tableReady
-            // 
-            this.tableReady.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.tableReady.Location = new System.Drawing.Point(0, 0);
-            this.tableReady.Name = "tableReady";
-            this.tableReady.Size = new System.Drawing.Size(75, 23);
-            this.tableReady.TabIndex = 0;
-            this.tableReady.UseVisualStyleBackColor = false;
-            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableReady);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -183,6 +172,7 @@
                 int PositionY = InitialY + (TableSize * (i / RowSize)) + SpaceBetweenTables;
 
                 TableButton.BackColor = TableViews[i].table.Status;
+                TableButton.Text = (i+1).ToString();
                 TableButton.Location = new System.Drawing.Point(PositionX, PositionY);
                 TableButton.Size = new System.Drawing.Size(TableSize, TableSize);
                 TableButton.TabIndex = i;
@@ -207,6 +197,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button tableReady;
     }
 }

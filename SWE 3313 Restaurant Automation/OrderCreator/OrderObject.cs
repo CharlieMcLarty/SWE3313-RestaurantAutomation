@@ -12,10 +12,14 @@ namespace SWE_3313_Project
         int paymentInfo;
         int totalPrice;
         int seat;
+        int TableID;
+        int waiterID;
         List<MenuItem> items;
 
-        public OrderObject()
+        public OrderObject(int TableID, int waiterID)
         {
+            this.TableID = TabelID;
+            this.waiterID = waiterID;
             totalPrice = 0;
             items = new List<MenuItem>();
         }

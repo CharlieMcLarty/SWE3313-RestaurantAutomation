@@ -15,12 +15,13 @@ namespace SWE_3313_Project
         List<string> seat2 = new List<string>();
         List<string> seat3 = new List<string>();
         List<string> seat4 = new List<string>();
+        internal TableObject table;
         public Color StatusColor { get; set; }
-        public TableStatus(Color initialColor)
+        public TableStatus(Color initialColor, TableObject table)
         {
 
             InitializeComponent();
-            
+            this.table = table;
             //Checks radio box for current table status
             if (initialColor == Color.Green)
             {
@@ -45,6 +46,7 @@ namespace SWE_3313_Project
         private void New_Order_Click(object sender, EventArgs e)
         {
             Order startOrder = new Order();
+            startOrder.tableID = table.GetTableID();
             startOrder.Show();
         }
 
@@ -56,12 +58,12 @@ namespace SWE_3313_Project
 
         private void radioButtonDirty_CheckedChanged(object sender, EventArgs e)
         {
-            StatusColor = Color.Yellow;
+            StatusColor = Color.Red;
         }
 
         private void radioButtonFull_CheckedChanged(object sender, EventArgs e)
         {
-            StatusColor = Color.Red;
+            StatusColor = Color.Yellow;
         }
 
         private void radioButtonClean_CheckedChanged(object sender, EventArgs e)
