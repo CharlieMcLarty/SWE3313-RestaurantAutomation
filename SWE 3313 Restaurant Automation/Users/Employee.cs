@@ -1,9 +1,16 @@
-﻿namespace SWE_3313_Restaurant_Automation.Users
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SWE_3313_Project
 {
     internal abstract class Employee
     {
         /// <summary>
         /// The ID number associated with this user
+        /// 5 Digits
         /// </summary>
         protected int employeeID;
         /// <summary>
@@ -30,6 +37,8 @@
         {
             this.password = Password;
         }
+
+
         /// <summary>
         /// Returns this user's stored password
         /// </summary>
@@ -41,6 +50,7 @@
         /// <summary>
         /// Returns this user's stored username
         /// </summary>
+
         public String GetUsername()
         {
             return username;

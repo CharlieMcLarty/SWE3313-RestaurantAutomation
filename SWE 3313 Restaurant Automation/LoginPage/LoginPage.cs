@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SWE_3313_Project;
 
 namespace SWE_3313_Project
 {
@@ -26,13 +27,24 @@ namespace SWE_3313_Project
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
-          
-    
-                this.Hide();
-                WelcomeForm welcomeForm = new WelcomeForm();
-                welcomeForm.Show();
-          
+            string username = EmployeeIDBox.Text;
+            string password = PasswordBox.Text;
+            
+            //Checks if user login is a waiter
+            string[] users = File.ReadAllLines("WaiterLogin.txt");
+            foreach (string user in users)
+            {
+                string[] credentials = user.Split(',');
+                if (credentials[0] == username && credentials[1] == password)
+                {
+                    WelcomeForm welcomeForm = new WelcomeForm();
+                    welcomeForm.Show();
+                    this.Hide();
+                    return;
+                }
+            }
+            
+            //Duplicate waiter code for manager with new welcomeForm
             
         }
 

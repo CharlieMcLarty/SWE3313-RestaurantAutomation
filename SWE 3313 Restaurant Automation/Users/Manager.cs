@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SWE_3313_Restaurant_Automation.Users
+namespace SWE_3313_Project
 {
     internal class Manager : Employee
     {
         public Manager()
         {
             employeeID = 12345;
-            username = "Doug Smith";
-            password = "password123!";
+            username = "manager";
+            password = "Password";
         }
        
     }

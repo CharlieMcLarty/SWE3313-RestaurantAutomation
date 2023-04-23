@@ -15,10 +15,12 @@ namespace SWE_3313_Project
         public WelcomeForm()
         {
             InitializeComponent();
-            
         }
         
-        
+        private void buttonClick(object sender, EventArgs e, int tableNum)
+        {
+            
+        }
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
@@ -45,8 +47,6 @@ namespace SWE_3313_Project
                 default:
                     break;
             }*/
-            TableStatus tableStatus = new TableStatus();
-            tableStatus.Show();
         }
         
         private void button2_Click(object sender, EventArgs e)
