@@ -17,7 +17,7 @@ namespace SWE_3313_Project
         List<string> seat4 = new List<string>();
         internal TableObject table;
         public Color StatusColor { get; set; }
-        public TableStatus(Color initialColor, TableObject table)
+        internal TableStatus(Color initialColor, TableObject table)
         {
 
             InitializeComponent();
@@ -69,6 +69,13 @@ namespace SWE_3313_Project
         private void radioButtonClean_CheckedChanged(object sender, EventArgs e)
         {
             StatusColor = Color.Green;
+        }
+
+        private void New_Order_Click_1(object sender, EventArgs e)
+        {
+            Order startOrder = new Order();
+            startOrder.tableID = table.GetTableID();
+            startOrder.Show();
         }
     }
 }

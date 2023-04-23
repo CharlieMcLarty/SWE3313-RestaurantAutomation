@@ -46,6 +46,7 @@
             this.New_Order.TabIndex = 0;
             this.New_Order.Text = "Order";
             this.New_Order.UseVisualStyleBackColor = true;
+            this.New_Order.Click += new System.EventHandler(this.New_Order_Click_1);
             // 
             // Payment
             // 

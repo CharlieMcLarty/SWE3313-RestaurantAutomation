@@ -24,7 +24,7 @@ namespace SWE_3313_Project
 
         private void Add_Seat_1_Click(object sender, EventArgs e)
         {
-            OrderObject order = new OrderObject(tableID, LoginPage.currentWaiter.getEmployeeId());
+            //OrderObject order = new OrderObject(tableID, LoginPage.currentWaiter.getEmployeeId());
         }
     }
 }

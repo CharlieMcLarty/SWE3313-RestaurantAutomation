@@ -18,10 +18,18 @@ namespace SWE_3313_Project
 
         public OrderObject(int TableID, int waiterID)
         {
-            this.TableID = TabelID;
+            this.TableID = TableID;
             this.waiterID = waiterID;
             totalPrice = 0;
             items = new List<MenuItem>();
+        }
+        public int getTableID()
+        {
+            return TableID;
+        }
+        public int getWaiterID()
+        {
+            return waiterID;
         }
     }
 }

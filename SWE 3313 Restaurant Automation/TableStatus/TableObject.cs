@@ -34,7 +34,7 @@ namespace SWE_3313_Project
 
         public void CreateOrder()
         {
-            CurrentOrders.Add(new OrderObject(TableID));
+            //CurrentOrders.Add(new OrderObject(TableID));
         }
     }
 }
