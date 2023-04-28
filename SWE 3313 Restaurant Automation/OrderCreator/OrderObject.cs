@@ -12,11 +12,11 @@ namespace SWE_3313_Project
         static int orderCount;
         int orderID;
         int paymentInfo;
-        int totalPrice;
+        double totalPrice;
         int seat;
         int TableID;
         int waiterID;
-        List<MenuItem> items;
+        public List<MenuItem> items;
 
 
         public OrderObject(int TableID, int waiterID)
@@ -34,6 +34,15 @@ namespace SWE_3313_Project
         public int getWaiterID()
         {
             return waiterID;
+        }
+        public void addToOrder(MenuItem menuItem)
+        {
+            items.Add(menuItem);
+            totalPrice += menuItem.price;
+        }
+        public double getTotalPrice()
+        {
+            return totalPrice;
         }
     }
 }

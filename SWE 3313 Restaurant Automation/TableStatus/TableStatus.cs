@@ -41,8 +41,7 @@ namespace SWE_3313_Project
 
         private void New_Order_Click(object sender, EventArgs e)
         {
-            Order startOrder = new Order();
-            startOrder.tableID = table.GetTableID();
+            Order startOrder = new Order(table);
             startOrder.Show();
         }
 
@@ -69,8 +68,7 @@ namespace SWE_3313_Project
 
         private void New_Order_Click_1(object sender, EventArgs e)
         {
-            Order startOrder = new Order();
-            startOrder.tableID = table.GetTableID();
+            Order startOrder = new Order(table);
             startOrder.Show();
         }
 
@@ -78,6 +76,11 @@ namespace SWE_3313_Project
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Payment_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Price: " + table.Order.getTotalPrice());
         }
     }
 }

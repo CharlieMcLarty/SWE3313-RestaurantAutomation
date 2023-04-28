@@ -10,11 +10,11 @@ namespace SWE_3313_Project
     {
         String name;
         String category;
-        int price;
+        public double price;
         int inventory;
         int timesOrdered;
 
-        public MenuItem(String name, int price, String category)
+        public MenuItem(String name, double price, String category)
         {
             this.price = price;
             this.name = name;
@@ -22,5 +22,7 @@ namespace SWE_3313_Project
             inventory = 100;
             timesOrdered = 0;
         }
+
+        public String getName() { return name; }  
     }
 }

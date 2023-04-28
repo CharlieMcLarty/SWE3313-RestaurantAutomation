@@ -12,7 +12,7 @@ namespace SWE_3313_Project
         private int TableID;
         /// Can be "clean" "full" or "dirty
         public Color Status;
-        OrderObject Order;
+        public OrderObject Order;
 
 
         public TableObject()
@@ -32,9 +32,5 @@ namespace SWE_3313_Project
             return TableID;
         }
 
-        public void CreateOrder()
-        {
-            //CurrentOrders.Add(new OrderObject(TableID));
-        }
     }
 }
