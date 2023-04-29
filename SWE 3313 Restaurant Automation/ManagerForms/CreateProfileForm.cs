@@ -26,10 +26,9 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
 
             foreach (Waiter waiter in LoginPage.waiters)
             {
-                if (waiter.getEmployeeID() == Int32.Parse(employeeID) && Int32.Parse(employeeID) == LoginPage.manager.getEmployeeID())
+                if (waiter.getEmployeeID() == Int32.Parse(employeeID) || Int32.Parse(employeeID) == LoginPage.manager.getEmployeeID())
                 {
-                    Console.WriteLine("Cannot create profile: Employee Id is already in use by another employee");
-                    this.Close();
+                    MessageBox.Show("Cannot create profile: Employee Id is already in use by another employee");
                     return;
                 }
             }

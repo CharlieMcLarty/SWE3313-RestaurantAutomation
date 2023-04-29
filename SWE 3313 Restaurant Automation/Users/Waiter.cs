@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace SWE_3313_Project
             AddWaiterToFile();
         }
 
+        //Adds waiter id and password to file
         public void AddWaiterToFile()
         {
             //Adds waiter info to txt file if it doesnt exist already
@@ -51,6 +53,37 @@ namespace SWE_3313_Project
                     writer.WriteLine(waiterInfo);
                 }
             }
+        }
+
+        //Removes waiter id and password from file
+        public void RemoveWaiterFromFile()
+        {
+            // Open the text file for reading
+            using (StreamReader reader = new StreamReader("WaiterLogin.txt"))
+            {
+                // Create a temporary file to write the updated contents to
+                using (StreamWriter writer = new StreamWriter("LoginInfo.tmp"))
+                {
+                    string line;
+
+                    // Read each line from the file
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        // Split the line into its components
+                        string[] parts = line.Split(',');
+
+                        // Check if the userID matches
+                        if (parts[0] != employeeID.ToString())
+                        {
+                            // Write the line to the temporary file
+                            writer.WriteLine(line);
+                        }
+                    }
+                }
+            }
+            //Replace original file with temporary file
+            File.Delete("WaiterLogin.Txt");
+            File.Move("LoginInfo.tmp", "WaiterLogin.txt");
         }
     }
 }

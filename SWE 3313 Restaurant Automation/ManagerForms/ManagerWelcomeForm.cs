@@ -25,7 +25,8 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
 
         private void ModifyProfileButtonClick(object sender, EventArgs e)
         {
-
+            ModifyProfile modifyProfile = new ModifyProfile();
+            modifyProfile.Show();
         }
     }
 }

@@ -59,5 +59,10 @@ namespace SWE_3313_Project
         {
             return employeeID;
         }
+
+        public void setEmployeeID(int newID)
+        {
+            employeeID = newID;
+        }
     }
 }
