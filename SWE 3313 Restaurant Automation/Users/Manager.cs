@@ -10,9 +10,9 @@ namespace SWE_3313_Project
     {
         public Manager()
         {
-            employeeID = 12345;
+            employeeID = 123456;
             username = "manager";
-            password = "Password";
+            password = "password";
         }
        
     }

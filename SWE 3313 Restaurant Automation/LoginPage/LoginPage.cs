@@ -9,17 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using SWE_3313_Project;
+using SWE_3313_Restaurant_Automation.ManagerForms;
 
 namespace SWE_3313_Project
 {
-    public partial class LoginPage : Form 
+    public partial class LoginPage : Form
     {
-        Manager manager = new Manager();
-        //manager id is 12345, password is Password123!
-        
-        List<Waiter> waiters = new List<Waiter>();
+        //Creates list for employees
+        //Manager id is 123456 and password is password
+        internal static Manager manager;
+
+        internal static List<Waiter> waiters;
         internal static Waiter currentWaiter;
         internal static List<MenuItem> menuItems;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -32,8 +35,9 @@ namespace SWE_3313_Project
                 }
             }
             // Initialize employees
-            
+            manager = new Manager();
             //use first waiter for testing
+            waiters = new List<Waiter>();   
             waiters.Add(new Waiter(new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, "waiter", "password", 111111));
             waiters.Add(new Waiter(new List<int>() { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 }, "Pikachu921", "Thunderbolt5", 944731));
             waiters.Add(new Waiter(new List<int>() { 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 }, "RogerM1998", "So%2j82", 156735));
@@ -43,16 +47,21 @@ namespace SWE_3313_Project
             CreateMenuItems();
 
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            //Obtains login info from text box as strings
             string username = EmployeeIDBox.Text;
             string password = PasswordBox.Text;
-            
+
+            //Checks if user entered manager credentials
+            if (Int32.Parse(username) == manager.getEmployeeID() && password.Equals(manager.GetPassword()))
+            {
+                ManagerWelcomeForm managerWelcomeForm = new ManagerWelcomeForm();
+                managerWelcomeForm.Show();
+                this.Hide();
+            }
+
             //Checks if user login is a waiter
             string[] users = File.ReadAllLines("WaiterLogin.txt");
             foreach (string user in users)
@@ -73,9 +82,6 @@ namespace SWE_3313_Project
                     this.Hide();
                 }
             }
-            
-            //Duplicate waiter code for manager with new welcomeForm
-            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -83,16 +89,7 @@ namespace SWE_3313_Project
             pictureBox1.ImageLocation = "/bin/Image/J's Restaurant Login Icon.png";
         }
 
-        private void EmployeeIDBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //Initializes all menu items
         public void CreateMenuItems()
         {
             menuItems.Add(new MenuItem("Pork Nachos", 8.5, "Appetizer"));
@@ -121,6 +118,7 @@ namespace SWE_3313_Project
             menuItems.Add(new MenuItem("Coffee", 2, "Beverage"));
         }
 
+        //Fetches item from menu list from name
         internal static MenuItem GetMenuItem(String name)
         {
             foreach (MenuItem item in menuItems)

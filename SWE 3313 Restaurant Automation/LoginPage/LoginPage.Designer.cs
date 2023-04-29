@@ -30,90 +30,86 @@ namespace SWE_3313_Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
-            this.EmployeeIDBox = new System.Windows.Forms.TextBox();
-            this.PasswordBox = new System.Windows.Forms.TextBox();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.EmployeeID = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            EmployeeIDBox = new TextBox();
+            PasswordBox = new TextBox();
+            LoginButton = new Button();
+            EmployeeID = new Label();
+            Password = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // EmployeeIDBox
             // 
-            this.EmployeeIDBox.Location = new System.Drawing.Point(130, 265);
-            this.EmployeeIDBox.Name = "EmployeeIDBox";
-            this.EmployeeIDBox.Size = new System.Drawing.Size(138, 23);
-            this.EmployeeIDBox.TabIndex = 0;
-            this.EmployeeIDBox.TextChanged += new System.EventHandler(this.EmployeeIDBox_TextChanged);
+            EmployeeIDBox.Location = new Point(130, 265);
+            EmployeeIDBox.Name = "EmployeeIDBox";
+            EmployeeIDBox.Size = new Size(138, 23);
+            EmployeeIDBox.TabIndex = 0;
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(130, 309);
-            this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(138, 23);
-            this.PasswordBox.TabIndex = 1;
-            this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
+            PasswordBox.Location = new Point(130, 309);
+            PasswordBox.Name = "PasswordBox";
+            PasswordBox.PasswordChar = '*';
+            PasswordBox.Size = new Size(138, 23);
+            PasswordBox.TabIndex = 1;
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(51, 352);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(217, 23);
-            this.LoginButton.TabIndex = 2;
-            this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = true;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            LoginButton.Location = new Point(51, 352);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(217, 23);
+            LoginButton.TabIndex = 2;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.Click += LoginButton_Click;
             // 
             // EmployeeID
             // 
-            this.EmployeeID.AutoSize = true;
-            this.EmployeeID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EmployeeID.Location = new System.Drawing.Point(51, 268);
-            this.EmployeeID.Name = "EmployeeID";
-            this.EmployeeID.Size = new System.Drawing.Size(73, 15);
-            this.EmployeeID.TabIndex = 4;
-            this.EmployeeID.Text = "Employee ID";
+            EmployeeID.AutoSize = true;
+            EmployeeID.ForeColor = SystemColors.ButtonHighlight;
+            EmployeeID.Location = new Point(51, 268);
+            EmployeeID.Name = "EmployeeID";
+            EmployeeID.Size = new Size(73, 15);
+            EmployeeID.TabIndex = 4;
+            EmployeeID.Text = "Employee ID";
             // 
             // Password
             // 
-            this.Password.AutoSize = true;
-            this.Password.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Password.Location = new System.Drawing.Point(51, 309);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(57, 15);
-            this.Password.TabIndex = 5;
-            this.Password.Text = "Password";
+            Password.AutoSize = true;
+            Password.ForeColor = SystemColors.ButtonHighlight;
+            Password.Location = new Point(51, 309);
+            Password.Name = "Password";
+            Password.Size = new Size(57, 15);
+            Password.TabIndex = 5;
+            Password.Text = "Password";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 152);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(69, 73);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(170, 152);
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // Form1
+            // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 516);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.EmployeeID);
-            this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.PasswordBox);
-            this.Controls.Add(this.EmployeeIDBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(307, 516);
+            Controls.Add(pictureBox1);
+            Controls.Add(Password);
+            Controls.Add(EmployeeID);
+            Controls.Add(LoginButton);
+            Controls.Add(PasswordBox);
+            Controls.Add(EmployeeIDBox);
+            Name = "LoginPage";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
