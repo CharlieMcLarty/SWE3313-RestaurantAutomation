@@ -83,6 +83,7 @@
             Add_Seat_1.TabIndex = 4;
             Add_Seat_1.Text = "Add";
             Add_Seat_1.UseVisualStyleBackColor = true;
+            Add_Seat_1.Click += Add_Seat_1_Click;
             // 
             // Add_Seat_2
             // 
@@ -92,6 +93,7 @@
             Add_Seat_2.TabIndex = 5;
             Add_Seat_2.Text = "Add";
             Add_Seat_2.UseVisualStyleBackColor = true;
+            Add_Seat_2.Click += Add_Seat_2_Click;
             // 
             // Add_Seat_3
             // 
@@ -101,6 +103,7 @@
             Add_Seat_3.TabIndex = 6;
             Add_Seat_3.Text = "Add";
             Add_Seat_3.UseVisualStyleBackColor = true;
+            Add_Seat_3.Click += Add_Seat_3_Click;
             // 
             // Add_Seat_4
             // 
@@ -110,6 +113,7 @@
             Add_Seat_4.TabIndex = 7;
             Add_Seat_4.Text = "Add";
             Add_Seat_4.UseVisualStyleBackColor = true;
+            Add_Seat_4.Click += Add_Seat_4_Click;
             // 
             // button1
             // 
@@ -119,7 +123,7 @@
             button1.TabIndex = 8;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += BackButton_Click;
+            button1.Click += button1_Click;
             // 
             // Order
             // 

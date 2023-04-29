@@ -12,13 +12,13 @@ namespace SWE_3313_Project
         private int TableID;
         /// Can be "clean" "full" or "dirty
         public Color Status;
-        List<OrderObject> CurrentOrders;
+        public OrderObject Order;
+
 
         public TableObject()
         {
             TableID = ++TableCount;
             Status = Color.Green;
-            CurrentOrders = new List<OrderObject>();
         }
 
         public Color GetStatus()
@@ -26,14 +26,15 @@ namespace SWE_3313_Project
             return Status;
         }
 
+        public void CreateOrder()
+        {
+            Order = new OrderObject(TableID, LoginPage.currentWaiter.getEmployeeID());
+        }
+
         public int GetTableID()
         {
             return TableID;
         }
 
-        public void CreateOrder()
-        {
-            CurrentOrders.Add(new OrderObject());
-        }
     }
 }

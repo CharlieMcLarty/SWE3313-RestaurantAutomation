@@ -11,16 +11,13 @@ namespace SWE_3313_Project
 {
     public partial class TableStatus : Form
     {
-        List<string> seat1 = new List<string>();
-        List<string> seat2 = new List<string>();
-        List<string> seat3 = new List<string>();
-        List<string> seat4 = new List<string>();
+        internal TableObject table;
         public Color StatusColor { get; set; }
-        public TableStatus(Color initialColor)
+        internal TableStatus(Color initialColor, TableObject table)
         {
 
             InitializeComponent();
-            
+            this.table = table;
             //Checks radio box for current table status
             if (initialColor == Color.Green)
             {
@@ -44,7 +41,7 @@ namespace SWE_3313_Project
 
         private void New_Order_Click(object sender, EventArgs e)
         {
-            Order startOrder = new Order();
+            Order startOrder = new Order(table);
             startOrder.Show();
         }
 
@@ -56,17 +53,60 @@ namespace SWE_3313_Project
 
         private void radioButtonDirty_CheckedChanged(object sender, EventArgs e)
         {
-            StatusColor = Color.Yellow;
+            StatusColor = Color.Red;
         }
 
         private void radioButtonFull_CheckedChanged(object sender, EventArgs e)
         {
-            StatusColor = Color.Red;
+            StatusColor = Color.Yellow;
         }
 
         private void radioButtonClean_CheckedChanged(object sender, EventArgs e)
         {
             StatusColor = Color.Green;
+        }
+
+
+
+        //Resets tables current order
+        private void button2_Click(object sender, EventArgs e)
+        {
+            table.CreateOrder();
+        }
+
+        //Creates receipt txt file in bin
+        private void Payment_Click(object sender, EventArgs e)
+        {
+            String receiptAddress = "Order" + table.Order.getOrderID() + "Receipt.txt";
+            DateTime dateTime = DateTime.Now;
+            using (FileStream Stream = File.Create(receiptAddress))
+            {
+                AddText(Stream, "Order " + table.Order.getOrderID() + "\n" + LoginPage.currentWaiter.getEmployeeID() + "\n" + dateTime);
+                foreach (MenuItem menuItem in table.Order.items)
+                {
+                    AddText(Stream, "\n\n" + menuItem.getName() + ", " + menuItem.price);
+                }
+                AddText(Stream, "\n\nTotal: $" + table.Order.getTotalPrice());
+            }
+        }
+
+        //New order must be clicked before allowing any items to be added to order
+        private void AddToOrderClick(object sender, EventArgs e)
+        {
+            if (table.Order != null)
+            {
+                Order startOrder = new Order(table);
+                startOrder.Show();
+            }
+            else
+            {
+                Console.WriteLine("Create new order first");
+            }
+        }
+        private static void AddText(FileStream fs, string value)
+        {
+            byte[] info = new UTF8Encoding(true).GetBytes(value);
+            fs.Write(info, 0, info.Length);
         }
     }
 }

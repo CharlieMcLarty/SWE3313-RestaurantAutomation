@@ -28,107 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.New_Order = new System.Windows.Forms.Button();
-            this.Payment = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            New_Order = new Button();
+            Payment = new Button();
+            button1 = new Button();
+            radioButton1 = new RadioButton();
+            groupBox1 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton2 = new RadioButton();
+            button2 = new Button();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // New_Order
             // 
-            this.New_Order.Location = new System.Drawing.Point(142, 132);
-            this.New_Order.Name = "New_Order";
-            this.New_Order.Size = new System.Drawing.Size(89, 23);
-            this.New_Order.TabIndex = 0;
-            this.New_Order.Text = "Order";
-            this.New_Order.UseVisualStyleBackColor = true;
+            New_Order.Location = new Point(142, 90);
+            New_Order.Name = "New_Order";
+            New_Order.Size = new Size(89, 23);
+            New_Order.TabIndex = 0;
+            New_Order.Text = "Add to Order";
+            New_Order.UseVisualStyleBackColor = true;
+            New_Order.Click += AddToOrderClick;
             // 
             // Payment
             // 
-            this.Payment.Location = new System.Drawing.Point(142, 180);
-            this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(89, 23);
-            this.Payment.TabIndex = 1;
-            this.Payment.Text = "Payment";
-            this.Payment.UseVisualStyleBackColor = true;
+            Payment.Location = new Point(142, 180);
+            Payment.Name = "Payment";
+            Payment.Size = new Size(89, 23);
+            Payment.TabIndex = 1;
+            Payment.Text = "Payment";
+            Payment.UseVisualStyleBackColor = true;
+            Payment.Click += Payment_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(256, 386);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BackButton_Click);
+            button1.Location = new Point(256, 386);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 23);
+            button1.TabIndex = 3;
+            button1.Text = "Done";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += BackButton_Click;
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 19);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Clean";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButtonClean_CheckedChanged);
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(6, 22);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(55, 19);
+            radioButton1.TabIndex = 4;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Clean";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButtonClean_CheckedChanged;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(145, 228);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(86, 100);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Table Status";
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Location = new Point(145, 228);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(86, 100);
+            groupBox1.TabIndex = 5;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Table Status";
             // 
             // radioButton3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 75);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(50, 19);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Dirty";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButtonDirty_CheckedChanged);
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(7, 75);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(50, 19);
+            radioButton3.TabIndex = 6;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Dirty";
+            radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButtonDirty_CheckedChanged;
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 47);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(44, 19);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Full";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButtonFull_CheckedChanged);
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(7, 47);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(44, 19);
+            radioButton2.TabIndex = 5;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Full";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButtonFull_CheckedChanged;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(142, 136);
+            button2.Name = "button2";
+            button2.Size = new Size(89, 23);
+            button2.TabIndex = 6;
+            button2.Text = "New Order";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // TableStatus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Payment);
-            this.Controls.Add(this.New_Order);
-            this.Name = "TableStatus";
-            this.Text = "TableStatus";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(379, 450);
+            Controls.Add(button2);
+            Controls.Add(groupBox1);
+            Controls.Add(button1);
+            Controls.Add(Payment);
+            Controls.Add(New_Order);
+            Name = "TableStatus";
+            Text = "TableStatus";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -140,5 +153,6 @@
         private GroupBox groupBox1;
         private RadioButton radioButton3;
         private RadioButton radioButton2;
+        private Button button2;
     }
 }
