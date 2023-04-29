@@ -78,32 +78,30 @@ namespace SWE_3313_Project
         private void Payment_Click(object sender, EventArgs e)
         {
             String receiptAddress = "Order" + table.Order.getOrderID() + "Receipt.txt";
-            try
+            DateTime dateTime = DateTime.Now;
+            using (FileStream Stream = File.Create(receiptAddress))
             {
-                if (File.Exists(receiptAddress))
+                AddText(Stream, "Order " + table.Order.getOrderID() + "\n" + LoginPage.currentWaiter.getEmployeeID() + "\n" + dateTime);
+                foreach (MenuItem menuItem in table.Order.items)
                 {
-                    File.Delete(receiptAddress);
+                    AddText(Stream, "\n\n" + menuItem.getName() + ", " + menuItem.price);
                 }
-                FileStream fs = File.Create(receiptAddress);
-                DateTime dateTime = DateTime.Now;
-                AddText(fs, "Order " + table.Order.getOrderID() + "\n" + LoginPage.currentWaiter.getEmployeeID() + "\n" + dateTime);
-                foreach(MenuItem menuItem in table.Order.items)
-                {
-                    AddText(fs, "\n\n" + menuItem.getName() + ", " + menuItem.price);
-                }
-                AddText(fs, "\n\nTotal: $" + table.Order.getTotalPrice());
-                fs.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
+                AddText(Stream, "\n\nTotal: $" + table.Order.getTotalPrice());
             }
         }
 
+        //New order must be clicked before allowing any items to be added to order
         private void AddToOrderClick(object sender, EventArgs e)
         {
-            Order startOrder = new Order(table);
-            startOrder.Show();
+            if (table.Order != null)
+            {
+                Order startOrder = new Order(table);
+                startOrder.Show();
+            }
+            else
+            {
+                Console.WriteLine("Create new order first");
+            }
         }
         private static void AddText(FileStream fs, string value)
         {

@@ -24,6 +24,13 @@ namespace SWE_3313_Project
         {
             InitializeComponent();
             this.BackColor = ColorTranslator.FromHtml("#733635");
+            if (!File.Exists("WaiterLogin.txt"))
+            {
+                using (FileStream fs = File.Create("WaiterLogin.txt"))
+                {
+                    //Creates text file for user login if it doesnt already exist
+                }
+            }
             // Initialize employees
             
             //use first waiter for testing
