@@ -30,11 +30,12 @@
         {
             CreateProfileButton = new Button();
             ModifyProfileButton = new Button();
+            AuthorizationsButton = new Button();
             SuspendLayout();
             // 
             // CreateProfileButton
             // 
-            CreateProfileButton.Location = new Point(337, 121);
+            CreateProfileButton.Location = new Point(337, 147);
             CreateProfileButton.Name = "CreateProfileButton";
             CreateProfileButton.Size = new Size(139, 23);
             CreateProfileButton.TabIndex = 0;
@@ -52,11 +53,22 @@
             ModifyProfileButton.UseVisualStyleBackColor = true;
             ModifyProfileButton.Click += ModifyProfileButtonClick;
             // 
+            // AuthorizationsButton
+            // 
+            AuthorizationsButton.Location = new Point(337, 205);
+            AuthorizationsButton.Name = "AuthorizationsButton";
+            AuthorizationsButton.Size = new Size(139, 23);
+            AuthorizationsButton.TabIndex = 2;
+            AuthorizationsButton.Text = "Authorizations";
+            AuthorizationsButton.UseVisualStyleBackColor = true;
+            AuthorizationsButton.Click += AuthorizationsButtonClick;
+            // 
             // ManagerWelcomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(AuthorizationsButton);
             Controls.Add(ModifyProfileButton);
             Controls.Add(CreateProfileButton);
             Name = "ManagerWelcomeForm";
@@ -68,5 +80,6 @@
 
         private Button CreateProfileButton;
         private Button ModifyProfileButton;
+        private Button AuthorizationsButton;
     }
 }

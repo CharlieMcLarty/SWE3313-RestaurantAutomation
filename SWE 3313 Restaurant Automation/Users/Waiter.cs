@@ -11,6 +11,7 @@ namespace SWE_3313_Project
     {
         List<int> assignedTables;
         List<int> dailyHoursWorked;
+        bool canRefund;
 
         public Waiter()
         {
@@ -19,6 +20,7 @@ namespace SWE_3313_Project
             employeeID = 0;
             username = "undefined";
             password = "password";
+            canRefund = false;
         }
         public Waiter(List<int> assignedTables, String username, String password, int ID)
         {
@@ -28,6 +30,7 @@ namespace SWE_3313_Project
             this.password = password;
             this.employeeID = ID;
             AddWaiterToFile();
+            canRefund = false;
         }
 
         //Adds waiter id and password to file
@@ -84,6 +87,11 @@ namespace SWE_3313_Project
             //Replace original file with temporary file
             File.Delete("WaiterLogin.Txt");
             File.Move("LoginInfo.tmp", "WaiterLogin.txt");
+        }
+
+        public void setRefundPermission(bool canRefund)
+        {
+            this.canRefund = canRefund;
         }
     }
 }

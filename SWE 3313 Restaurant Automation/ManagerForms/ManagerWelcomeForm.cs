@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWE_3313_Project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,5 +29,12 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
             ModifyProfile modifyProfile = new ModifyProfile();
             modifyProfile.Show();
         }
+
+        private void AuthorizationsButtonClick(object sender, EventArgs e)
+        {
+            ManagerAuthorizationsForm managerAuthorizationsForm = new ManagerAuthorizationsForm();
+            managerAuthorizationsForm.Show();
+        }
+
     }
 }
