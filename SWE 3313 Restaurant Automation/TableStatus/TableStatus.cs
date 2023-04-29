@@ -66,21 +66,49 @@ namespace SWE_3313_Project
             StatusColor = Color.Green;
         }
 
-        private void New_Order_Click_1(object sender, EventArgs e)
+
+
+        //Resets tables current order
+        private void button2_Click(object sender, EventArgs e)
+        {
+            table.CreateOrder();
+        }
+
+        //Creates receipt txt file in bin
+        private void Payment_Click(object sender, EventArgs e)
+        {
+            String receiptAddress = "Order" + table.Order.getOrderID() + "Receipt.txt";
+            try
+            {
+                if (File.Exists(receiptAddress))
+                {
+                    File.Delete(receiptAddress);
+                }
+                FileStream fs = File.Create(receiptAddress);
+                DateTime dateTime = DateTime.Now;
+                AddText(fs, "Order " + table.Order.getOrderID() + "\n" + LoginPage.currentWaiter.getEmployeeID() + "\n" + dateTime);
+                foreach(MenuItem menuItem in table.Order.items)
+                {
+                    AddText(fs, "\n\n" + menuItem.getName() + ", " + menuItem.price);
+                }
+                AddText(fs, "\n\nTotal: $" + table.Order.getTotalPrice());
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void AddToOrderClick(object sender, EventArgs e)
         {
             Order startOrder = new Order(table);
             startOrder.Show();
         }
-
-        //Starts new order
-        private void button2_Click(object sender, EventArgs e)
+        private static void AddText(FileStream fs, string value)
         {
-
-        }
-
-        private void Payment_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Price: " + table.Order.getTotalPrice());
+            byte[] info = new UTF8Encoding(true).GetBytes(value);
+            fs.Write(info, 0, info.Length);
         }
     }
 }

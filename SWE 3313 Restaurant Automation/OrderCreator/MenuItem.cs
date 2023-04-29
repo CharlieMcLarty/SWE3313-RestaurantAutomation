@@ -11,8 +11,8 @@ namespace SWE_3313_Project
         String name;
         String category;
         public double price;
-        int inventory;
-        int timesOrdered;
+        private int inventory;
+        private int timesOrdered;
 
         public MenuItem(String name, double price, String category)
         {
@@ -24,5 +24,13 @@ namespace SWE_3313_Project
         }
 
         public String getName() { return name; }  
+        public void decrementInventory()
+        {
+            inventory--;
+        }
+        public void incrementTimesOrdered()
+        {
+            timesOrdered++;
+        }
     }
 }

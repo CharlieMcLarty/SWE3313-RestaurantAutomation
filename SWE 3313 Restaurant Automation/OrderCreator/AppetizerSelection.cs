@@ -27,16 +27,19 @@ namespace SWE_3313_Restaurant_Automation
         private void Pork_Nachos_Click(object sender, EventArgs e)
         {
             table.Order.addToOrder(LoginPage.GetMenuItem("Pork Nachos"));
+            Apps_Finished_Click(this, new EventArgs());
         }
 
         private void Catfish_Bites_Click(object sender, EventArgs e)
         {
             table.Order.addToOrder(LoginPage.GetMenuItem("Catfish Bites"));
+            Apps_Finished_Click(this, new EventArgs());
         }
 
         private void Chicken_Nachos_Click(object sender, EventArgs e)
         {
             table.Order.addToOrder(LoginPage.GetMenuItem("Chicken Nachos"));
+            Apps_Finished_Click(this, new EventArgs());
         }
 
         private void Fried_Veggies_Click(object sender, EventArgs e)
@@ -47,7 +50,6 @@ namespace SWE_3313_Restaurant_Automation
 
         private void Apps_Finished_Click(object sender, EventArgs e)
         {
-            
             this.Close();
         }
     }

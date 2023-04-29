@@ -39,10 +39,13 @@ namespace SWE_3313_Project
         {
             items.Add(menuItem);
             totalPrice += menuItem.price;
+            menuItem.decrementInventory();
+            menuItem.incrementTimesOrdered();
         }
         public double getTotalPrice()
         {
             return totalPrice;
         }
+        public int getOrderID() { return  orderID; }
     }
 }

@@ -47,7 +47,7 @@
             New_Order.TabIndex = 0;
             New_Order.Text = "Add to Order";
             New_Order.UseVisualStyleBackColor = true;
-            New_Order.Click += New_Order_Click_1;
+            New_Order.Click += AddToOrderClick;
             // 
             // Payment
             // 
@@ -123,7 +123,7 @@
             button2.Name = "button2";
             button2.Size = new Size(89, 23);
             button2.TabIndex = 6;
-            button2.Text = "Reset Order";
+            button2.Text = "New Order";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 

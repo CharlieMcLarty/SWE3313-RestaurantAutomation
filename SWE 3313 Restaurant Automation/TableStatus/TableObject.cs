@@ -19,12 +19,16 @@ namespace SWE_3313_Project
         {
             TableID = ++TableCount;
             Status = Color.Green;
-            Order = new OrderObject(TableID, LoginPage.currentWaiter.getEmployeeID());
         }
 
         public Color GetStatus()
         {
             return Status;
+        }
+
+        public void CreateOrder()
+        {
+            Order = new OrderObject(TableID, LoginPage.currentWaiter.getEmployeeID());
         }
 
         public int GetTableID()
