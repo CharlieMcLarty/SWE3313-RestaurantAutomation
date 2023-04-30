@@ -48,7 +48,7 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
                 else
                 {
                     GetWaiter(EmployeeIDTextBox.Text).SetUsername(newUsername);
-                    MessageBox.Show("Sucessfully changed username!");
+                    MessageBox.Show("Successfully changed username!");
                     this.Close();
                 }
             }
@@ -75,7 +75,7 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
                         editWaiter.SetUsername(newUsername);
                         editWaiter.AddWaiterToFile();
                         editWaiter.setEmployeeID(Int32.Parse(newID));
-                        MessageBox.Show("Sucessfully changed ID");
+                        MessageBox.Show("Successfully changed ID");
                         this.Close();
                     }
                 }
