@@ -20,7 +20,7 @@ namespace SWE_3313_Project
             {
                 using (FileStream fs = File.Create("WaiterLogin.txt"))
                 {
-                    //Creates text file for user login if it doesnt already exist
+                    //Creates text file for user login if it doesn't already exist
                 }
             }
             // Initialize employees
@@ -87,7 +87,7 @@ namespace SWE_3313_Project
             menuItems.Add(new MenuItem("Fried Veggies", 6.5, "Appetizer"));
 
             menuItems.Add(new MenuItem("House Salad", 7.5, "Salad"));
-            menuItems.Add(new MenuItem("Caeser Salad", 7.5, "Salad"));
+            menuItems.Add(new MenuItem("Caesar Salad", 7.5, "Salad"));
             menuItems.Add(new MenuItem("Sweet Potato Chicken Salad", 11.5, "Salad"));
             menuItems.Add(new MenuItem("Wedge Salad", 7.5, "Salad"));
 
