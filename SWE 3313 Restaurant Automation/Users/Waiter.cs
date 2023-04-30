@@ -9,7 +9,7 @@ namespace SWE_3313_Project
 {
     internal class Waiter : Employee
     {
-        List<int> assignedTables;
+        public List<int> assignedTables;
         List<int> dailyHoursWorked;
         bool canRefund;
 

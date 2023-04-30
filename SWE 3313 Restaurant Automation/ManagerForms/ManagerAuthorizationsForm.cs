@@ -23,6 +23,7 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
             Waiter currentWaiter = getWaiter(Int32.Parse(EmployeeAuthorizationTextBox.Text));
             if (currentWaiter != null) 
             {
+                this.Close();
                 DialogResult result = MessageBox.Show("Allow Refunds", "Confirmation", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {

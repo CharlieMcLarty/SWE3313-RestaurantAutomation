@@ -36,5 +36,15 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
             managerAuthorizationsForm.Show();
         }
 
+        private void EmployeeActivitiesButtonClick(object sender, EventArgs e)
+        {
+            EmployeeActivityTrackerForm employeeActivitiesForm = new EmployeeActivityTrackerForm();
+            employeeActivitiesForm.Show();
+        }
+
+        private void Layout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Coming in a later iteration!");
+        }
     }
 }
