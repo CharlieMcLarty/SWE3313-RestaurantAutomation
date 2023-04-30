@@ -37,7 +37,7 @@
             // 
             // CreateProfileButton
             // 
-            CreateProfileButton.Location = new Point(337, 147);
+            CreateProfileButton.Location = new Point(309, 128);
             CreateProfileButton.Name = "CreateProfileButton";
             CreateProfileButton.Size = new Size(139, 23);
             CreateProfileButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // ModifyProfileButton
             // 
-            ModifyProfileButton.Location = new Point(337, 176);
+            ModifyProfileButton.Location = new Point(309, 157);
             ModifyProfileButton.Name = "ModifyProfileButton";
             ModifyProfileButton.Size = new Size(139, 23);
             ModifyProfileButton.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // AuthorizationsButton
             // 
-            AuthorizationsButton.Location = new Point(337, 205);
+            AuthorizationsButton.Location = new Point(309, 186);
             AuthorizationsButton.Name = "AuthorizationsButton";
             AuthorizationsButton.Size = new Size(139, 23);
             AuthorizationsButton.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(334, 234);
+            button1.Location = new Point(306, 215);
             button1.Name = "button1";
             button1.Size = new Size(142, 23);
             button1.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(337, 263);
+            button2.Location = new Point(309, 244);
             button2.Name = "button2";
             button2.Size = new Size(139, 23);
             button2.TabIndex = 4;

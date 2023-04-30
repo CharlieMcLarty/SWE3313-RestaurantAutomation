@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using SWE_3313_Project;
-using SWE_3313_Restaurant_Automation.ManagerForms;
+﻿using SWE_3313_Restaurant_Automation.ManagerForms;
 
 namespace SWE_3313_Project
 {
@@ -37,7 +26,7 @@ namespace SWE_3313_Project
             // Initialize employees
             manager = new Manager();
             //use first waiter for testing
-            waiters = new List<Waiter>();   
+            waiters = new List<Waiter>();
             waiters.Add(new Waiter(new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, "waiter", "password", 111111));
             waiters.Add(new Waiter(new List<int>() { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 }, "Pikachu921", "Thunderbolt5", 944731));
             waiters.Add(new Waiter(new List<int>() { 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 }, "RogerM1998", "So%2j82", 156735));

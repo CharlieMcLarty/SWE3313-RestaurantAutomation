@@ -1,13 +1,4 @@
 ﻿using SWE_3313_Project;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SWE_3313_Restaurant_Automation.ManagerForms
 {
@@ -21,7 +12,7 @@ namespace SWE_3313_Restaurant_Automation.ManagerForms
         private void SelectEmployeeAuthorizationButtonClick(object sender, EventArgs e)
         {
             Waiter currentWaiter = getWaiter(Int32.Parse(EmployeeAuthorizationTextBox.Text));
-            if (currentWaiter != null) 
+            if (currentWaiter != null)
             {
                 this.Close();
                 DialogResult result = MessageBox.Show("Allow Refunds", "Confirmation", MessageBoxButtons.YesNo);

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SWE_3313_Project
+﻿namespace SWE_3313_Project
 {
     internal class MenuItem
     {
@@ -23,7 +17,7 @@ namespace SWE_3313_Project
             timesOrdered = 0;
         }
 
-        public String getName() { return name; }  
+        public String getName() { return name; }
         public void decrementInventory()
         {
             inventory--;

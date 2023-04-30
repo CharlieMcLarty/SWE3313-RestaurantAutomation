@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
+﻿using System.Text;
 
 namespace SWE_3313_Project
 {
@@ -100,7 +93,7 @@ namespace SWE_3313_Project
             }
             else
             {
-                Console.WriteLine("Create new order first");
+                MessageBox.Show("Please start a new order first");
             }
         }
         private static void AddText(FileStream fs, string value)

@@ -1,15 +1,4 @@
-﻿using SWE_3313_Project;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SWE_3313_Restaurant_Automation.ManagerForms
+﻿namespace SWE_3313_Restaurant_Automation.ManagerForms
 {
     public partial class ManagerWelcomeForm : Form
     {

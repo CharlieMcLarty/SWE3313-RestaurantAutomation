@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SWE_3313_Project
+﻿namespace SWE_3313_Project
 {
     internal class OrderObject
     {
@@ -46,6 +40,6 @@ namespace SWE_3313_Project
         {
             return totalPrice;
         }
-        public int getOrderID() { return  orderID; }
+        public int getOrderID() { return orderID; }
     }
 }
