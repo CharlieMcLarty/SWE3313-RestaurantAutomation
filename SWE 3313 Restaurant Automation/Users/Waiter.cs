@@ -5,6 +5,7 @@
         public List<int> assignedTables;
         List<int> dailyHoursWorked;
         bool canRefund;
+        public List<TableObject> tableList;
 
         public Waiter()
         {
@@ -24,6 +25,7 @@
             this.employeeID = ID;
             AddWaiterToFile();
             canRefund = false;
+            tableList = new List<TableObject>();
         }
 
         //Adds waiter id and password to file

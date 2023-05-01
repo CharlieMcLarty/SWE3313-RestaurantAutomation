@@ -46,6 +46,7 @@ namespace SWE_3313_Project
             //Checks if user entered manager credentials
             if (Int32.Parse(username) == manager.getEmployeeID() && password.Equals(manager.GetPassword()))
             {
+                WelcomeForm welcome = new WelcomeForm();
                 ManagerWelcomeForm managerWelcomeForm = new ManagerWelcomeForm();
                 managerWelcomeForm.Show();
                 this.Hide();

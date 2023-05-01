@@ -2,6 +2,7 @@
 {
     partial class WelcomeForm
     {
+        internal List<TableView> TableViews;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -161,7 +162,7 @@
             int RowSize = 6;
 
             // Create the tables
-            List<TableView> TableViews = new List<TableView>();
+            TableViews = new List<TableView>();
             for (int i = 0; i < 30; ++i)
             {
                 TableViews.Add(new TableView());
@@ -178,6 +179,13 @@
                 TableButton.TabIndex = i;
                 TableButton.UseVisualStyleBackColor = false;
 
+                foreach (Waiter waiter in LoginPage.waiters)
+                {
+                    for (int j = 0; j < waiter.assignedTables.Count - 1; j++)
+                    {
+                        //waiter.tableList.Add(TableViews[waiter.assignedTables[j]].table);
+                    }
+                }
 
                 this.Controls.Add(TableButton);
             }
